@@ -5,7 +5,7 @@
 
 ## Project Description
 
-API server capable of extracting reviews information from any given product page (e.g., Shopify, Amazon).
+The Review Extractor is an API server designed to extract reviews from any product page (e.g., Shopify, Amazon) in JSON format. It automates the process of retrieving review data, making it convenient for websites to manage and analyze feedback efficiently.
 
 ## Motivation
 
@@ -13,11 +13,11 @@ The motivation behind this project is to provide a simple and efficient way to c
 
 ## System Architecture or Workflow
 
-System Architecture or Workflow
+The operational flow of the project can be summarized as follows:
 
-- The user submits a request to the API's endpoint.
-- The API processes the incoming request and generates a response.
-- The processed response is sent back to the user.
+- A user sends a request to the API endpoint with the product page URL.
+- The API processes the request, extracting the necessary review details.
+- The extracted information is returned to the user in the form of a structured response.
 
 ## API Usage and Sample Responses
 
@@ -47,6 +47,13 @@ Here is an example of a sample response:
     }
    
 }
+
+
+
+
+
+
+
 
 ## Instructions on How to Run the Project
 
