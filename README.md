@@ -1,34 +1,86 @@
 
+# Review Extractor
 
+## About the Project
 
-# Review Extracter
+The **Review Extractor** is an API server designed to dynamically extract reviews from product pages across different e-commerce platforms, such as Shopify and Amazon. By leveraging modern browser automation frameworks and integration with Large Language Models (LLMs), this project simplifies the process of collecting, structuring, and analyzing product reviews.
 
-## Project Description
+---
 
-The Review Extractor is an API server designed to extract reviews from any product page (e.g., Shopify, Amazon) in JSON format. It automates the process of retrieving review data, making it convenient for websites to manage and analyze feedback efficiently.
+## Key Features
+
+1. **Dynamic Extraction**  
+   - Utilizes AI to dynamically identify CSS selectors for reviews on any given product page. This enables the API to work universally across platforms without hardcoding selectors.
+
+2. **Pagination Handling**  
+   - Automatically detects and navigates through paginated review sections to ensure comprehensive data collection.
+
+3. **Scalable and Efficient**  
+   - Built using lightweight and scalable technologies like FastAPI, ensuring fast response times and smooth handling of concurrent requests.
+
+4. **AI Integration**  
+   - Incorporates OpenAI's GPT model to analyze page structures and determine the appropriate selectors for extracting review data dynamically.
+
+5. **Structured JSON Output**  
+   - Provides review data in a clean and standardized JSON format, suitable for further analysis or direct use in applications.
+
+6. **Error Handling**  
+   - Robust error handling to gracefully manage invalid URLs, failed extractions, and unexpected scenarios.
+
+7. **Flexible Deployment**  
+   - Can be deployed locally or on cloud platforms with minimal configuration, making it accessible to a wide range of users.
+
+---
 
 ## Motivation
 
-The motivation behind this project is to provide a simple and efficient way to collect reviews data in json form for websites.
+The motivation behind this project is to simplify and automate the process of collecting product reviews for websites, marketers, and analysts. By providing an API-based solution, users can focus on leveraging the extracted data instead of spending time on manual data collection.
 
-## System Architecture or Workflow
+---
 
-The operational flow of the project can be summarized as follows:
+## Workflow and System Architecture  
 
-- A user sends a request to the API endpoint with the product page URL.
-- The API processes the request, extracting the necessary review details.
-- The extracted information is returned to the user in the form of a structured response.
+The **system workflow** operates as follows:
 
-## API Usage and Sample Responses
+1. **Request Submission**:  
+   - The user submits a request to the API endpoint with the product page URL.  
 
-The API provides the following endpoints:
+2. **Review Extraction**:  
+   - The API processes the incoming request by:
+     - Fetching the product page using a headless browser.
+     - Using AI to identify CSS selectors for review data.
+     - Navigating through paginated reviews (if present).
+   
+3. **Response Delivery**:  
+   - The API returns a structured JSON response containing extracted reviews and relevant metadata.
 
-* `GET /reviews/`: Returns a list of all reviews.
-* `POST /reviews/`: Creates a new review.
-* `GET /reviews/:id`: Returns a single review by ID.
-* `PUT /reviews/:id`: Updates a single review by ID.
-* `DELETE /reviews/:id`: Deletes a single review by ID.
+4. **Client Usage**:  
+   - Users can directly consume the response for analysis, reporting, or integration into other systems.
 
+---
+
+## Steps to Get and Run the Project
+
+### Prerequisites
+
+Ensure the following are installed on your system:
+
+- **Python** (version 3.8 or higher)  
+- **pip** (Python package manager)  
+- **Node.js** (required for Playwright)  
+- **Git** (for cloning the repository)
+
+### Steps to Run Locally
+
+1. **Clone the Repository**  
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+
+
+
+
+## Sample Respones
 Here is an example of a sample response:
 {
   "reviews_count": 150,
@@ -54,12 +106,3 @@ Here is an example of a sample response:
 
 
 
-
-## Instructions on How to Run the Project
-
-To run the project, follow these steps:
-
-1. Clone the repository using `git clone`.
-2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Run the migrations using `python manage.py migrate`.
-4. Start the development server using `python manage.py runserver`.
