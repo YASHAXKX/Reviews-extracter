@@ -1,11 +1,11 @@
 
 
 
-# My Django Project
+# Review Extracter
 
 ## Project Description
 
-My Django Project is a web application that provides a RESTful API for managing reviews. 
+API server capable of extracting reviews information from any given product page (e.g., Shopify, Amazon).
 
 ## Motivation
 
@@ -13,20 +13,11 @@ The motivation behind this project is to provide a simple and efficient way to c
 
 ## System Architecture or Workflow
 
-The system architecture or workflow of the project is as follows:
+System Architecture or Workflow
 
-* The user sends a request to the API endpoint.
-* The API endpoint processes the request and returns a response.
-* The response is then sent back to the user.
-
-## Instructions on How to Run the Project
-
-To run the project, follow these steps:
-
-1. Clone the repository using `git clone`.
-2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Run the migrations using `python manage.py migrate`.
-4. Start the development server using `python manage.py runserver`.
+- The user submits a request to the API's endpoint.
+- The API processes the incoming request and generates a response.
+- The processed response is sent back to the user.
 
 ## API Usage and Sample Responses
 
@@ -56,3 +47,12 @@ Here is an example of a sample response:
     }
    
 }
+
+## Instructions on How to Run the Project
+
+To run the project, follow these steps:
+
+1. Clone the repository using `git clone`.
+2. Install the required dependencies using `pip install -r requirements.txt`.
+3. Run the migrations using `python manage.py migrate`.
+4. Start the development server using `python manage.py runserver`.
